@@ -1,3 +1,4 @@
+import {playAudio} from "../util";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
 import {
@@ -77,6 +78,7 @@ const Player = ({
         setCurrentSong(songs[(currentIndex - 1) % songs.length]);
       }
     }
+    playAudio(isPlaying, audioRef);
   };
 
   return (
@@ -86,13 +88,13 @@ const Player = ({
         <input
           onChange={dragHandler}
           min={0}
-          max={songInfo.duration || 0}
+          max={ songInfo.duration || 0}
           value={songInfo.currentTime}
           type="range"
           name=""
           id=""
         />
-        <p>{getTime(songInfo.duration)}</p>
+        <p>{songInfo.duration ? getTime(songInfo.duration) : "0:00"}</p>
       </div>
       <div className="player__play-control">
         <FontAwesomeIcon
