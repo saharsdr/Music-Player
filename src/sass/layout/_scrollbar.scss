@@ -1,0 +1,15 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155,155,155,.5) transparent;
+}
+*::-webkit-scrollbar {
+  width: .5rem;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155,155,155,.5) transparent;
+  border-radius: 2rem;
+  border: transparent;
+}

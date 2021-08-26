@@ -1,0 +1,52 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 100%;
+  box-shadow: 3rem 3rem 5rem lightgray;
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all ease 0.5s;
+  opacity: 0;
+
+  &--active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  h2 {
+    padding: 4rem;
+  }
+
+  &__song {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    cursor: pointer;
+    transition: background-color 0.8s;
+
+    &__selected {
+      background-color: rgb(130, 189, 238);
+    }
+
+    &:hover {
+      background-color: rgb(222, 222, 222);
+    }
+
+    &--cover {
+      width: 30%;
+    }
+
+    &__description {
+      padding: 2rem;
+
+      &--name {
+        font-size: 1.6rem;
+      }
+      &--artist {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
